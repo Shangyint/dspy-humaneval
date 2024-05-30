@@ -100,7 +100,7 @@ def unsafe_execute_tests(problem, completion, result, timeout):
             result.append("timed out")
         except AssertionError as e:
             actual_output = exec_globals["result"] if "result" in exec_globals else "something else"
-            result.append(f"Assertion: {e}, but got {actual_output}.")
+            result.append(f"Assertion Error: {e}, but got {actual_output}.")
         except BaseException as e:
             result.append(f"failed: {e}")
 

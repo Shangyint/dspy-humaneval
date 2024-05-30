@@ -42,7 +42,7 @@ def post_process_tests(tests):
             if len(eqns) != 2:
                 continue
             actual, expected = eqns
-            assert_message = f"Expected {expected.strip()}."
+            assert_message = f"Expected {expected.strip()}"
             actual_result = "result = " + actual.strip() + "\n"
             result.append(f"{actual_result}\n{assert_test}, {repr(assert_message)}")
     return result
